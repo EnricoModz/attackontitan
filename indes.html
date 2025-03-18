@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan</title>
+    <style>
+        /* Resetando margens e preenchimentos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Estilo do corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #ffcc00;
+        }
+
+        /* Seções */
+        section {
+            margin-bottom: 50px;
+        }
+
+        /* Estilo das imagens */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Estilo do card de personagem */
+        .character-card {
+            background: #222;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .character-card img {
+            width: 200px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Botão interativo */
+        .button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #111;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e5b100;
+        }
+
+        /* Estilo da animação de transição de personagens */
+        .character-info {
+            display: none;
+            margin-top: 20px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .character-info.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Attack on Titan</h1>
+        <p>Descubra o mundo de Attack on Titan</p>
+    </header>
+
+    <section>
+        <h2>Sobre o Anime</h2>
+        <p><strong>Attack on Titan</strong> (Shingeki no Kyojin) é um anime baseado no mangá de Hajime Isayama. O anime gira em torno da luta da humanidade contra os gigantes conhecidos como Titãs, que ameaçam a existência da raça humana.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Attack_on_Titan_logo.svg" alt="Attack on Titan Logo">
+    </section>
+
+    <section>
+        <h2>Personagens Principais</h2>
+
+        <div class="character-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Eren_Yeager.png" alt="Eren Yeager">
+            <h3>Eren Yeager</h3>
+            <button class="button" onclick="toggleInfo('eren')">Saiba mais sobre Eren</button>
+            <div id="eren" class="character-info">
+                <p>Eren Yeager é o protagonista da série. Ele possui o poder de se transformar em Titã, o que o torna uma peça chave na luta contra os gigantes.</p>
+            </div>
+        </div>
+
+        <div class="character-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Mikasa_Ackerman.png" alt="Mikasa Ackerman">
+            <h3>Mikasa Ackerman</h3>
+            <button class="button" onclick="toggleInfo('mikasa')">Saiba mais sobre Mikasa</button>
+            <div id="mikasa" class="character-info">
+                <p>Mikasa Ackerman é a irmã adotiva de Eren e uma das combatentes mais habilidosas da humanidade, conhecida por sua lealdade e força.</p>
+            </div>
+        </div>
+
+        <div class="character-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Armin_Arlert.png" alt="Armin Arlert">
+            <h3>Armin Arlert</h3>
+            <button class="button" onclick="toggleInfo('armin')">Saiba mais sobre Armin</button>
+            <div id="armin" class="character-info">
+                <p>Armin Arlert é o melhor amigo de Eren e Mikasa. Ele é extremamente inteligente e tem um papel importante na estratégia contra os Titãs.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Função para alternar a visibilidade das informações dos personagens
+        function toggleInfo(characterId) {
+            const info = document.getElementById(characterId);
+            info.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
